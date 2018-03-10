@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>image gallery</title>
+    <link href="style/main.css" rel="stylesheet" type="text/css"/>
+    <link href="style/index.css" rel="stylesheet" type="text/css"/>
+    <link href="style/form.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div id = "error"></div>
+	<div class="centerdown"><button id="signout">Sign Out</button></div>
+    <div class="centerdown"><button id="toggle">show/hide image submission</button></div>
+    <form class="complex_form" id="imagesubmit">
+      <div class="form_title">submit a new image</div>
+      <input type="text" id="title" class="form_area" placeholder="enter image title"/>
+      <div class="form_radio">
+          <input type="radio" id="url" value="url">url<br>
+          <input type="radio" id="file" value="file">file upload<br>
+      </div>
+      <input type="url" id="urlsrc" class="form_area" placeholder="enter the image url"/>
+      <input type="file" id="files" accept="image/*">
+      <input type="submit" class="btn"/>
+    </form>
+	
+	
+    
+    <form class="complex_form" id="commentsubmit">
+      <div class="form_title">Post a message</div>
+      <textarea id="comment" class="form_element" placeholder="Enter your message"  rows="5"></textarea>
+      <input type="submit" class="btn"/>
+    </form>
+    
+    <div class="centerdown" id="pictures">
+		Select a user below
+		<div class="buttonsection" id="userssection"> 
+        </div>
+		<div class = "buttonsection">
+            <button id="prevusers">previous 5 users</button>
+            <button id="nextusers">next 5 users</button>
+        </div>
+        <div class = "buttonsection">
+            <button id="scrollleft">&lt;-</button>
+            <button id="delete">delete</button>
+            <button id="scrollright">-></button>
+        </div>
+        <div class="centerdown" id="sliderpic">
+        </div> 
+		<div class="centerdown" id="commentsection">
+        </div>
+        <div class = "buttonsection">
+            <button id="prev">previous 10 posts</button>
+            <button id="next">next 10 posts</button>
+        </div>
+    </div>
+   
+    <footer>
+        <a href='credits.html'>credits</a>
+        <div id='validation'></div>
+    </footer>
+    <script src="js/view.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+</html>
